@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallax Invest IA | RCS Technology</title>
+  <meta name="description" content="Invista em ações com ajuda da IA da Parallax Invest. Sinais, predições e execução inteligente." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <span class="brand-badge">RCS</span>
+        <div>
+          <strong>Parallax Invest IA</strong>
+          <small>by RCS Technology</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#ia">Predição IA</a>
+        <a href="#planos">Planos</a>
+        <a href="#contato" class="btn btn-sm">Começar agora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="cloud cloud-a"></div>
+      <div class="cloud cloud-b"></div>
+      <div class="cloud cloud-c"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">INVESTIMENTO EM AÇÕES • IA PREDITIVA</p>
+          <h1>PARALLAX</h1>
+          <p class="lead">
+            Plataforma para investir em ações com apoio de inteligência artificial: receba sinais, probabilidade de movimento,
+            gestão de risco e insights em tempo real para tomar decisões melhores.
+          </p>
+          <div class="actions">
+            <a href="#contato" class="btn">Abrir conta</a>
+            <a href="#ia" class="btn btn-ghost">Ver predições</a>
+          </div>
+          <ul class="hero-highlights">
+            <li>Predições de tendência (curto, médio e longo prazo)</li>
+            <li>Score de confiança por ativo</li>
+            <li>Alertas de risco e oportunidade em tempo real</li>
+          </ul>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="coin">$</div>
+          <svg viewBox="0 0 520 420" class="pig-svg" aria-label="Ilustração financeira">
+            <ellipse cx="275" cy="240" rx="190" ry="145" fill="#d9d9de"></ellipse>
+            <circle cx="400" cy="230" r="8" fill="#0f53b7"></circle>
+            <path d="M92 214 L66 140 L94 150 L126 198" fill="none" stroke="#0f53b7" stroke-width="4" stroke-linecap="round"/>
+            <rect x="250" y="110" width="88" height="6" rx="3" fill="#0f53b7"></rect>
+            <circle cx="280" cy="245" r="55" fill="none" stroke="#6b34f0" stroke-width="4"></circle>
+            <text x="280" y="265" text-anchor="middle" font-size="80" fill="#6b34f0" font-family="Inter">$</text>
+            <path d="M447 244 C480 224, 500 252, 469 277" fill="none" stroke="#0f53b7" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M82 292 C92 316, 122 316, 134 292" fill="none" stroke="#0f53b7" stroke-width="4" stroke-linecap="round"></path>
+            <line x1="102" y1="266" x2="102" y2="232" stroke="#0f53b7" stroke-width="4"></line>
+            <rect x="194" y="355" width="58" height="52" rx="8" fill="#6b34f0"></rect>
+            <rect x="310" y="355" width="58" height="52" rx="8" fill="#0f53b7"></rect>
+            <rect x="0" y="398" width="520" height="22" fill="#0f53b7"></rect>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">COMO FUNCIONA</p>
+          <h2>Investimento assistido por IA, do onboarding à execução</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="card reveal"><span>1</span><h3>Conecte sua conta</h3><p>Integre sua corretora e defina perfil de risco para personalizar estratégias.</p></article>
+          <article class="card reveal"><span>2</span><h3>Receba sinais inteligentes</h3><p>A IA analisa mercado, notícias e histórico para gerar oportunidades por ativo.</p></article>
+          <article class="card reveal"><span>3</span><h3>Execute com confiança</h3><p>Tome decisão com score de confiança, stop sugerido e cenário alternativo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ia" class="section section-soft">
+      <div class="container ai-grid">
+        <div class="reveal">
+          <p class="eyebrow">PREDICTAR COM IA</p>
+          <h2>Simulador de predição de ações</h2>
+          <p class="muted">Digite um ticker e um horizonte para visualizar uma projeção simulada de tendência e confiança.</p>
+
+          <form id="predict-form" class="predict-form">
+            <input type="text" id="ticker" placeholder="Ex: PETR4" maxlength="8" required />
+            <select id="horizon">
+              <option value="7">7 dias</option>
+              <option value="30">30 dias</option>
+              <option value="90">90 dias</option>
+            </select>
+            <button class="btn" type="submit">Gerar predição</button>
+          </form>
+        </div>
+
+        <div class="prediction-card reveal" id="prediction-output">
+          <h3>Resultado da IA</h3>
+          <p class="muted">Aguardando simulação...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="planos" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">PLANOS</p>
+          <h2>Escolha o plano ideal para seu nível de operação</h2>
+        </div>
+        <div class="plans-grid">
+          <article class="plan reveal">
+            <h3>Starter</h3>
+            <strong>R$ 79/mês</strong>
+            <p>Sinais diários, watchlist e painel de risco.</p>
+          </article>
+          <article class="plan featured reveal">
+            <h3>Pro IA</h3>
+            <strong>R$ 199/mês</strong>
+            <p>Predições avançadas, alertas em tempo real e carteira inteligente.</p>
+          </article>
+          <article class="plan reveal">
+            <h3>Enterprise</h3>
+            <strong>Custom</strong>
+            <p>API, múltiplos usuários, governança e suporte dedicado RCS.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section cta">
+      <div class="container cta-box reveal">
+        <h2>Invista em ações com suporte de IA da Parallax</h2>
+        <p>Fale com a equipe da RCS Technology e acelere seus resultados.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Recebemos seu interesse! Nosso time comercial vai te chamar.');">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <button class="btn" type="submit">Quero começar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Parallax Invest IA.</p>
+      <p>Desenvolvido por <strong>RCS Technology</strong>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

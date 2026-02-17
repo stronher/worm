@@ -1,31 +1,61 @@
 # Parallax Invest IA — RCS Technology
 
-Site institucional/produto da **Parallax Invest IA** com foco em:
+Site institucional + backend funcional para plataforma de investimento em ações com IA.
 
-- investimento em ações com ajuda de IA,
-- predição de tendência por ativo,
-- apresentação profissional da proposta de valor.
+## Frontend
 
-## Arquivos
+- `index.html` — landing page com proposta de produto.
+- `styles.css` — visual premium e responsivo.
+- `script.js` — animações e simulador demonstrativo no client.
 
-- `index.html` — landing page com hero, produto, planos e CTA.
-- `styles.css` — design premium claro e responsivo.
-- `script.js` — animações e simulador de predição (demo).
+## Backend (completo)
 
-## Executar localmente
+- `backend.py` — API HTTP com persistência SQLite para:
+  - cadastro de usuários,
+  - watchlist,
+  - predições de IA (simuladas),
+  - ordens de compra/venda,
+  - posições/carteira,
+  - extrato de transações.
+
+### Endpoints
+
+- `POST /api/users`
+- `POST /api/watchlist`
+- `POST /api/predictions`
+- `POST /api/orders`
+- `GET /api/portfolio/{user_id}`
+- `GET /api/transactions/{user_id}`
+- `GET /health`
+
+## Rodando local
+
+### 1) Frontend
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Acesse: `http://localhost:8080`
+Acesse `http://localhost:8080`.
 
-## Recursos implementados
+### 2) Backend
 
-- Hero visual inspirado na identidade solicitada.
-- Seção “Como funciona” para fluxo da plataforma.
-- Seção “Predictar com IA” com simulador de ticker/horizonte.
-- Planos comerciais (Starter, Pro IA, Enterprise).
-- CTA para geração de leads.
+```bash
+python3 backend.py
+```
 
-> Nota: o simulador de predição é demonstrativo para a interface do site.
+API em `http://localhost:8090`.
+
+Variáveis úteis:
+
+- `PARALLAX_DB_PATH` (padrão: `parallax.db`)
+- `PARALLAX_HOST` (padrão: `0.0.0.0`)
+- `PARALLAX_PORT` (padrão: `8090`)
+
+## Testes
+
+```bash
+python3 -m unittest -v
+```
+
+> Nota: o módulo de predição é determinístico e demonstrativo para a experiência do produto.
